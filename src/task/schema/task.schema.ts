@@ -7,6 +7,9 @@ export type TaskDocument = Task & Document;
 @ObjectType()
 @Schema()
 export class Task {
+  @Field(() => String)
+  _id: string;
+
   @Prop()
   @Field(() => String)
   task: string;
